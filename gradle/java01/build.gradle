@@ -1,0 +1,13 @@
+apply plugin: 'java'
+apply plugin: 'application'
+
+mainClassName = 'test.Test01'
+
+task act{
+    tasks.compileJava.execute()
+    tasks.run.execute()
+}
+
+task act2{
+    dependsOn compileJava,run
+}

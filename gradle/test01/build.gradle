@@ -1,0 +1,30 @@
+def sample(){"sampleDef"}
+
+task task05{
+    def file = new File("test")
+    file.mkdir()
+}
+
+task act04{
+    def list = new ArrayList()
+    list.add("test1")
+    list.add("test2")
+
+    for(def s: list){
+        println s
+    }
+    println 'act04'
+}
+task task03{
+    println sample()
+}
+
+task task01{
+    println "sample"
+}
+
+task task02{
+    def x = 100
+    def y = 200
+    println x + y
+}
